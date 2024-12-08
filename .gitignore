@@ -1,0 +1,15 @@
+# vscode files
+.vscode/
+
+# example files
+**/input.txt
+**/example.txt
+**/test.txt
+
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so

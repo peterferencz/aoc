@@ -1,0 +1,2 @@
+import math
+with open("input.txt") as f:print(sum(math.floor(pow(2,len(list(filter(lambda x:x in j[0],j[1])))-1))for j in(list(map(lambda x:list(map(int,filter(lambda y:y!="",x.split(' ')))),l.strip().split(': ')[1].split(' | ')))for l in f.readlines())))
