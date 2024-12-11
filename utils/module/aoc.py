@@ -47,9 +47,13 @@ def read_matrix_char(transposed = False):
 def read_matrix_int(transposed = False):
     ret = []
     with open("example.txt" if mode == MODE_TEST else "input.txt", "r") as f:
-        ret = list(map(lambda l: list(map(int, " ".join(l.split()).split(' '))), f.readlines()))
+        ret = list(map(lambda l: list(map(int, list( l.strip().split(' ') if ' ' in l else l.strip() ))), f.readlines()))
     if transposed: return [[ret[j][i] for j in range(len(ret))] for i in range(len(ret[0]))]
     else: return ret
+
+def read_line_int():
+    with open("example.txt" if mode == MODE_TEST else "input.txt", "r") as f:
+        return list(map(int, list(f.readline().strip())))
 
 def read_lines():
     with open("example.txt" if mode == MODE_TEST else "input.txt", "r") as f:

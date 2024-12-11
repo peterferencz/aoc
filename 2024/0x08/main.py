@@ -3,15 +3,12 @@
 # Made for Advent of Code 2024, day 8
 # ==============================================================================
 import utils.aoc as aoc
-import math
 
 aoc.init(2024, 8)
 
 m = aoc.read_matrix_char()
 LY = len(m)
 LX = len(m[0])
-
-# =============================== Part 1 =======================================
 
 antennas = {}
 
@@ -21,6 +18,8 @@ for y in range(LY):
         if not m[y][x] in antennas:
             antennas[m[y][x]] = []
         antennas[m[y][x]].append((x, y))
+
+# =============================== Part 1 =======================================
 
 def getAntinotes(a1, a2):
     points = set()
